@@ -2,7 +2,7 @@ QToolTip {
     border: 1px solid #76797C;
     background-color: #5A7566;
     color: white;
-    padding: 0px;                /*remove padding, for fix combobox tooltip.*/
+    padding: 0px; /*remove padding, for fix combobox tooltip.*/
     opacity: 200;
 }
 
@@ -864,8 +864,14 @@ QListView {
     border: 1px solid #76797C;
     background-color: #232629;
 }
+
 QListView::item {
     height: 36px;
+}
+
+
+QTreeView::item {
+    height: 24px;
 }
 
 QTreeView:branch:selected,
@@ -909,7 +915,7 @@ QListView::item:!selected:hover,
 QTreeView::item:!selected:hover {
     background: #18465d;
     outline: 0;
-    color: #eff0f1
+    color: #eff0f1;
 }
 
 QListView::item:selected:hover,
@@ -1120,15 +1126,16 @@ QHeaderView {
 QHeaderView::section {
     background-color: #31363b;
     color: #eff0f1;
-    padding: 5px;
-    border: 1px solid #76797C;
+    padding: 2px;
+    border: 0px transparent;
+    /* border-right: 1px solid #76797C; */
     border-radius: 0px;
     text-align: center;
 }
 
 QHeaderView::section::vertical::first,
 QHeaderView::section::vertical::only-one {
-    border-top: 1px solid #76797C;
+    border-top: 3px solid #76797C;
 }
 
 QHeaderView::section::vertical {
@@ -1270,5 +1277,6 @@ QDateEdit::down-arrow:focus {
 }
 
 QMdiArea#mdi_area {
-    border: 1px solid #76797C;
+    border-right: 1px solid #76797C;
+    border-left: 1px solid #76797C;
 }
